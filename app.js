@@ -136,9 +136,18 @@
     if (state.currentFile === file && !silent) return;
     
     state.currentFile = file;
-    const matched = state.manifest.find(i => i.file === file);
-    const title = matched?.title || getFallbackTitleFromPath(file);
-    document.title = title + ' · Scone Docs';
+    let title = getFallbackTitleFromPath(file);
+    // manifest.json에서 해당 파일의 title 찾기
+    for (const section of state.manifest) {
+      if (section.items && Array.isArray(section.items)) {
+        const item = section.items.find(item => item.file === file);
+        if (item && item.title) {
+          title = item.title;
+          break;
+        }
+      }
+    }
+    document.title = title + ' - 버터스콘';
     
     if (!silent) {
       els.content.innerHTML = '<p class="muted">불러오는 중…</p>';
