@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>버터스콘 공식 문서</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/styles/github.min.css">
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="문서 목록">
+      <div class="sidebar-header">
+        <div class="header-left">
+          <a href="https://buttersc.one" target="_blank"><img src="pages/icon.png" alt="버터스콘" class="header-icon"></a>
+          <strong>버터스콘 공식 문서</strong>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 전환" title="라이트/다크 모드 전환">
+          <div class="toggle-track">
+            <div class="toggle-slider"></div>
+          </div>
+        </button>
+      </div>
+      <nav id="navList" class="nav-list" aria-label="문서 선택"></nav>
+    </aside>
+
+    <div class="content-wrap">
+      <button id="hamburger" class="hamburger" aria-label="메뉴 열기" title="메뉴">☰</button>
+      <main id="content" class="content" aria-live="polite">
+        <div class="empty">문서를 선택하세요…</div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

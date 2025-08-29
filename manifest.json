@@ -1,0 +1,36 @@
+[
+  {
+    "section": "규칙과 가이드",
+    "items": [
+      {
+        "title": "버터스콘 서버 규칙",
+        "file": "pages/rules.md"
+      },
+      {
+        "title": "역할에 대하여",
+        "file": "pages/roles.md"
+      },
+      {
+        "title": "커스텀 이모지에 대하여",
+        "file": "pages/emojis.md"
+      },
+      {
+        "title": "공개 범위 가이드",
+        "file": "pages/postprivacy.md"
+      }
+    ]
+  },
+  {
+    "section": "읽을거리",
+    "items": [
+      {
+        "title": "2023 버터스콘 연말 회고",
+        "file": "pages/2023wrapup.md"
+      },
+      {
+        "title": "2024 버터스콘 연말 회고",
+        "file": "pages/2024wrapup.md"
+      }
+    ]
+  }
+]
