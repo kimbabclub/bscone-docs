@@ -24,12 +24,33 @@
     "section": "읽을거리",
     "items": [
       {
+        "title": "[버터스콘 포크에 대하여]",
+        "file": "pages/bscone.md"
+      },
+      {
         "title": "2023 버터스콘 연말 회고",
         "file": "pages/2023wrapup.md"
       },
       {
         "title": "2024 버터스콘 연말 회고",
         "file": "pages/2024wrapup.md"
+      }
+    ]
+  },
+  {
+    "section": "[외부 링크]",
+    "items": [
+      {
+        "title": "버터스콘 메이커",
+        "url": "https://maker.buttersc.one"
+      },
+      {
+        "title": "미스키 json 메이커",
+        "url": "https://json.buttersc.one"
+      },
+      {
+        "title": "텍모지 메이커",
+        "url": "https://emoji.buttersc.one"
       }
     ]
   }

@@ -71,11 +71,22 @@
       if (section.items && Array.isArray(section.items)) {
         section.items.forEach((item) => {
           const a = document.createElement('a');
-          a.textContent = item.title || item.file;
-          a.href = '#file=' + encodeURIComponent(item.file);
-          a.dataset.file = item.file;
-          a.className = 'nav-item';
-          a.addEventListener('click', () => setActiveLink(item.file));
+          a.textContent = item.title || item.file || item.url;
+          
+          if (item.url) {
+            // 외부 링크인 경우
+            a.href = item.url;
+            a.target = '_blank';
+            a.rel = 'noreferrer';
+            a.className = 'nav-item';
+          } else {
+            // 내부 파일인 경우
+            a.href = '#file=' + encodeURIComponent(item.file);
+            a.dataset.file = item.file;
+            a.className = 'nav-item';
+            a.addEventListener('click', () => setActiveLink(item.file));
+          }
+          
           els.nav.appendChild(a);
         });
       }
