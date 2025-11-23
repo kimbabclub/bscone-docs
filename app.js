@@ -51,7 +51,7 @@
       section.section && 
       section.items && 
       Array.isArray(section.items) &&
-      section.items.every(item => item.title && item.file)
+      section.items.every(item => item.title && (item.file || item.url))
     );
     
     if (!isValidStructure) throw new Error('manifest.json 섹션 구조 오류');
